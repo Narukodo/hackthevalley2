@@ -1,0 +1,13 @@
+{
+  "name": "hackthevalley2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Narukodo/hackthevalley2.git",
+  "author": "Narukodo <mrnarukodo@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "path": "^0.12.7",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
+  }
+}
