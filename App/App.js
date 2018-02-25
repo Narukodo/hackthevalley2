@@ -1,23 +1,38 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React , { Component } from 'react';
+import {AppRegistry,Image,StyleSheet, Text, View, Dimensions } from 'react-native';
 
-export default class App extends React.Component {
+// import Main from 'main';
+
+export default class App extends Component {
   render() {
+    const resizeMode = 'center';
+    const text = 'I am some centered text';
+
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+      <View
+        style={{flex:1,flexDirection: 'row'}}
+      >
+        <Image 
+          style={{
+            resizeMode: 'cover',
+            position:'absolute',left:0,right:0,top:0,bottom:0,
+            height: null,
+            width: null,
+          }}
+          source={require('./images/cBackground.png')} />
       </View>
     );
   }
 }
 
+AppRegistry.registerComponent('BackgroundImage', () => BackgroundImage);
+
 const styles = StyleSheet.create({
-  container: {
+  fullContainer: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    backgroundColor: '#eee',
+    justifyContent: 'center'
+  }
 });
+
+
