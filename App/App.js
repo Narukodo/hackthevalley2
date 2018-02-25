@@ -1,11 +1,12 @@
 import React , { Component } from 'react';
-import {AppRegistry,Image,StyleSheet, Text, View, Button} from 'react-native';
+import {AppRegistry,Image,StyleSheet, Text, View, Button,Alert} from 'react-native';
+import {StackNavigator} from 'react-navigation';
 
 // import Main from 'main';
 
 export default class App extends Component {
   _handlePress() {
-    console.log('Pressed!');
+    Alert.alert('Thank you for your contribution!','Every little contribution helps charities better help people who are homeless')
   }
 
   render() {
@@ -36,8 +37,9 @@ export default class App extends Component {
             alignItems: 'center',
             zIndex: 200
           }}>
-            <Button onPress={this._handlePress} title="Hello" color="#FFFFFF"/>
+            <Button onPress={this._handlePress} title="Log!" color="#46A4FB" />
           </View>
+
      </View>
     );
   }
