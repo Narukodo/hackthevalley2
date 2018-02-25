@@ -9,10 +9,10 @@ import {Image,
         NavigatorIOS} from 'react-native';
 import FetchLocation from './Components/fetchLocation';
 
-// import Main from 'main';
 
 export default class App extends Component {
   getUserLocationHandler = () => {
+    navigator.geolocation.getCurrentPosition(position => {console.log(position)}, err => console.log(err));
     Alert.alert('Thank you for your contribution!','Every little contribution helps charities better help people who are homeless')
   }
 
