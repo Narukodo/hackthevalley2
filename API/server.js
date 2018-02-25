@@ -7,7 +7,7 @@ const bodyParser = require('body-parser')
 const app = express()
 
 const port = 8000
-router(app)
+// router(app)
 app.listen(port, () => {
   console.log('We are live on ' + port)
 })

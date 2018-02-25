@@ -3,6 +3,7 @@ import sql from 'mssql'
 
 export class DB extends Component {
   constructor() {
+    super()
     this.init()
   }
 

@@ -14,7 +14,10 @@ export const router = (app) => {
     res.send('getting stuff')
   })
 
-  app.get('/notes', (req, res) => endpoint(req, res), (req, res) => res.send('successfully sent!'))
+  app.get('/notes', (req, res, next) => endpoint(req, res, next), (req, res) => {
+    console.log('running end')
+    res.send('successfully sent!')
+  })
   app.get('/health', (req, res) => health(req, res))
 }
 
